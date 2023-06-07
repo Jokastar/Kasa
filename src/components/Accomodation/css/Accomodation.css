@@ -1,0 +1,123 @@
+
+
+.accomodation-infos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.accomodation-left h2, .accomodation-left p, .accomodation-owner p{
+    color: #FF6060;
+}
+
+.accomodation-left h2{
+    font-size: var(--step-3);
+    font-weight: 600;
+}
+
+.accomodation-left p, .accomodation-owner p{
+    font-size: var(--step-0);
+}
+
+.accomodation-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.accomodation-caracteristics{
+    padding: 0px;
+    margin: 0px; 
+}
+
+.accomodation-caracteristics li{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 15px;
+    background-color:#FF6060;
+    padding: 2px 30px;
+    border-radius: 15px;
+    color: white;
+    font-size: var(--step--1);
+}
+
+.accomodation-owner{
+    display: flex;
+    align-items: center;
+}
+
+.accomodation-owner h3{
+    text-align: end;
+}
+
+.owner-img-container{
+    width: 64px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 5px;
+}
+.owner-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dropDownMenus{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    margin: 20px 0px;
+}
+
+@media screen and (min-width:1440px) {
+    .accomodation-left h2{
+        font-size: var(--step-4);
+    }
+
+    .accomodation-left p, .accomodation-owner p{
+        font-size: var(--step-1);
+    }
+    .owner-img-container{
+        width: 80px;
+    }
+
+    .accomodation-caracteristics li{
+        font-size: var(--step-0);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+        .dialog{
+            aspect-ratio: initial;
+        }
+        .img-container{
+            aspect-ratio: 1.5/1;
+        }
+        
+        .owner-img-container{
+            width: 50px;
+        }
+        
+        .accomodation-caracteristics li{
+            padding:2px 15px;
+            border-radius:20px;
+        }
+        
+        .accomodation-infos{
+            flex-direction: column;
+        }
+        
+        .accomodation-owner{
+            justify-content: end;
+            align-items:center;
+        }
+        
+        .accomodation-right{
+            flex-direction: row-reverse;
+        }
+
+        .dropDownMenus{
+            flex-direction: column;
+        }
+  }

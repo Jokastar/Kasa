@@ -1,0 +1,19 @@
+
+.about-dropDownMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.about-dropDownMenu .dropDownMenu{
+    width: 90%;
+}
+
+@media screen and (max-width:768px) {
+    .about-dropDownMenu .dropDownMenu{
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,24 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  margin: 3% 5% 0% 5%;
+}
+
+a {
+    color: #FF6060; 
+    text-decoration: none; 
+  }
+
+
+  :root {
+    --step--2: clamp(0.48rem, calc(0.42rem + 0.28vw), 0.64rem);
+    --step--1: clamp(0.60rem, calc(0.53rem + 0.35vw), 0.80rem);
+    --step-0: clamp(0.75rem, calc(0.66rem + 0.43vw), 1.00rem);
+    --step-1: clamp(0.94rem, calc(0.83rem + 0.54vw), 1.25rem);
+    --step-2: clamp(1.17rem, calc(1.04rem + 0.68vw), 1.56rem);
+    --step-3: clamp(1.47rem, calc(1.30rem + 0.85vw), 1.95rem);
+    --step-4: clamp(1.83rem, calc(1.62rem + 1.06vw), 2.44rem);
+    --step-5: clamp(2.29rem, calc(2.02rem + 1.33vw), 3.05rem);
+  }

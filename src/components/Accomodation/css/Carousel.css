@@ -1,0 +1,87 @@
+
+dialog{
+    width: 100%;
+    display:flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+
+}
+
+.img-container{
+    width: 100%;
+    aspect-ratio: 2/0.9;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+
+
+
+.prev-btn, .next-btn{
+    position: absolute;
+    font-size: calc(2rem + 2vw);
+    color:white;
+    transition: color 0.2s "ease-in out";
+    cursor: pointer;
+}
+
+.prev-btn:hover, .next-btn:hover{
+    color: black;
+}
+
+.next-btn{
+    left: 95%;
+}
+.prev-btn{
+    right: 95%;
+}
+.modal-content{
+    width: 100%;
+}
+
+.modal-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.img-index{
+    position: absolute;
+    color: white;
+    bottom: 10%;
+    left: 50%;
+    font-size: var(--step-0);
+}
+
+
+@media screen and (max-width:768px) {
+    .img-container{
+        aspect-ratio: 3/2;
+    }
+
+}
+
+@media screen and (max-width:550px) {
+    .next-btn{
+        left: 90%;
+    }
+    .prev-btn{
+        right: 90%;
+    }
+}
+
+
+
+
