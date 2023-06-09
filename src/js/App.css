@@ -4,11 +4,17 @@
 
 body{
   margin: 3% 5% 0% 5%;
+
+}
+
+h1, h2, h3, p, ul li{
+  cursor: default;
 }
 
 a {
     color: #FF6060; 
     text-decoration: none; 
+    cursor: pointer;
   }
 
 

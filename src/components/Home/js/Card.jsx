@@ -7,8 +7,9 @@ function Card({id, title, cover}) {
     <Link to = {`/accomodation/${id}`}>
         <div className="grid-img-container" key={id}>
             <img src={cover} alt={title}/>
+            <p className="grid-img-title">{title}</p>
         </div>
-        <p className="grid-img-title">{title}</p>
+        
     </Link>    
     );
 }
