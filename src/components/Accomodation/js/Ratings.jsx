@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 import "../css/Ratings.css"; 
+import PropTypes from "prop-types"; 
 
 function Ratings({ratings}){
    const ratingsHtml = [];
@@ -18,6 +19,10 @@ function Ratings({ratings}){
             {ratingsHtml}
         </ul>
     );
+}
+
+Ratings.protoTypes = {
+    ratings:PropTypes.number
 }
 
 export default Ratings;

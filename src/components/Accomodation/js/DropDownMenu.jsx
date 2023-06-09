@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import "../css/DropDownMenu.css"; 
+import PropTypes from "prop-types"; 
 
 function DropDownMenu({title, infoList}) {
     const [isVisible, setIsVisible] = useState(false);
@@ -23,5 +24,12 @@ function DropDownMenu({title, infoList}) {
         </div>
       );
 }
+DropDownMenu.propTypes = {
+  title:PropTypes.string, 
+  infoList:PropTypes.oneOfType([
+    PropTypes.string, 
+    PropTypes.array
+  ])
 
+}
 export default DropDownMenu;

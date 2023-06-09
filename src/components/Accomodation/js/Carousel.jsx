@@ -3,7 +3,7 @@ import"../css/Carousel.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-
+import PropTypes from "prop-types"; 
 function Carousel({imageList}) {
     
     const [arrayIndex, setArrayIndex] = useState(0);   
@@ -38,6 +38,10 @@ function Carousel({imageList}) {
     </div>}
 </dialog>;
     return (modal);
+}
+
+Carousel.propTypes = {
+    imageList:PropTypes.array
 }
 
 export default Carousel;
