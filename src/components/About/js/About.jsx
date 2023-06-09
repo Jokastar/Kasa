@@ -6,7 +6,7 @@ function About() {
     return (
         <>
         <Header/>
-        <Banner title="" backgroundImage={window.location.origin + "/img/about-banner-img-background.png"}/>
+        <Banner title="" isHomePage={false}/>
         <div className="about-dropDownMenu">
                 <DropDownMenu 
                     title={"Fiabilité"}

@@ -1,10 +1,12 @@
 import "../css/Banner.css";
 import PropTypes from "prop-types"; 
+import HomeBannerImg from "../../../img/banner-img-background.png"; 
+import AboutBannerImg from "../../../img/about-banner-img-background.png"; 
 
-function Banner({title, backgroundImage}) {
+function Banner({title, isHomePage}) {
     return (
         <div className="banner-container"  >
-                <img src={backgroundImage} alt="img" />
+                <img src={isHomePage ? HomeBannerImg : AboutBannerImg} alt="img" />
             <h1>{title}</h1>
         </div>
     );
@@ -12,6 +14,6 @@ function Banner({title, backgroundImage}) {
 
 Banner.propTypes ={
     title:PropTypes.string, 
-    backgroundImage: PropTypes.string
+    isHomePage: PropTypes.bool
 }
 export default Banner;

@@ -7,7 +7,7 @@ function Home() {
     return (
         <>
           <Header/>
-          <Banner title="Chez vous, partout et ailleurs" backgroundImage={window.location.origin + "/img/banner-img-background.png"}/>
+          <Banner title="Chez vous, partout et ailleurs" isHomePage={true}/>
           <LocationGrid/>
           <Footer/>
         </>

@@ -1,9 +1,10 @@
 import "../css/Footer.css"; 
+import kasaLogoWhite from "../../../img/kasa-logo-white.svg"
 
 function Footer() {
     return (
         <footer>
-            <img src={window.location.origin  + "/img/kasa-logo-white.svg"} alt="kasa-logo-white"/>
+            <img src={kasaLogoWhite} alt="kasa-logo-white"/>
             <p>@2020 Kasa.All rights reserved</p>
         </footer>
     );
