@@ -1,11 +1,10 @@
-import Header from "../../Home/js/Header";
+
 import Banner from "../../Home/js/Banner";
 import DropDownMenu from "../../Accomodation/js/DropDownMenu"; 
 import "../css/About.css"; 
 function About() {
     return (
         <>
-        <Header/>
         <Banner title="" isHomePage={false}/>
         <div className="about-dropDownMenu">
                 <DropDownMenu 

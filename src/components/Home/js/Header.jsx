@@ -1,8 +1,15 @@
 import "../css/Header.css"; 
 import { Link } from "react-router-dom";
 import kasaLogo from "../../../img/kasa-logo.svg"; 
+import {useRef} from "react"; 
 
 function Header() {
+  const navLinkRefs = useRef([]); 
+  
+  function handleClick(e){
+   navLinkRefs.current.forEach(li => li.classList.remove("active")); 
+   e.target.classList.add("active"); 
+  }
     return ( 
         <header>
           <div className="header">
@@ -10,8 +17,18 @@ function Header() {
                 <Link to="/"><img src={kasaLogo} alt="logo-kasa"/></Link>
             </div>
             <ul className="nav-link">
-                <li><Link to="/">Accueil</Link></li>
-                <li><Link to="/about">A propos</Link></li>
+                <li><Link to="/"
+                       ref={(element) => (navLinkRefs.current[0] = element)}
+                       onClick={handleClick}>
+                       Accueil
+                    </Link>
+               </li>
+                <li><Link to="/about" 
+                          ref={(element) => (navLinkRefs.current[1] = element)}
+                          onClick={handleClick}>
+                          A propos
+                    </Link>
+                </li>
             </ul>
           </div>
         </header>

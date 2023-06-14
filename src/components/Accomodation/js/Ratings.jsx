@@ -21,7 +21,7 @@ function Ratings({ratings}){
     );
 }
 
-Ratings.protoTypes = {
+Ratings.propTypes = {
     ratings:PropTypes.number
 }
 

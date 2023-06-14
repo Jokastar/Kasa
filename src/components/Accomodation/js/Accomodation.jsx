@@ -1,4 +1,4 @@
-import Header from "../../Home/js/Header";
+
 import DropDownMenu from "./DropDownMenu";  
 import Carousel from "./Carousel"; 
 import { AccomodationContext } from "../../../js/App";
@@ -24,7 +24,6 @@ function Accomodation() {
   
     return (
         <>
-        <Header/>
         <Carousel imageList={accomodation.pictures}/>
         <div className="accomodation-infos">
             <div className="accomodation-left">

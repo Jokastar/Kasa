@@ -71,6 +71,10 @@ dialog{
         aspect-ratio: 3/2;
     }
 
+    .img-index{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width:550px) {

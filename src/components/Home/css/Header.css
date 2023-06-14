@@ -25,9 +25,12 @@
     font-size: calc(var(--step-0) *1.1);
 }
 
-.nav-link li:focus{
-    text-decoration: underline;
+.nav-link li a.active{
+    text-decoration:underline;
+    text-decoration-color: #FF6060;
 }
+
+
 
 
 @media screen and (min-width:1440px) {
