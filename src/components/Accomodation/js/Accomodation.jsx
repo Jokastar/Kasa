@@ -1,7 +1,7 @@
 
 import DropDownMenu from "./DropDownMenu";  
 import Carousel from "./Carousel"; 
-import { AccomodationContext } from "../../../js/App";
+import { AccomodationContext } from "../../../App";
 import { useContext, useEffect } from "react";
 import {useParams, useNavigate } from "react-router-dom";
 import Ratings from "./Ratings";
@@ -19,7 +19,7 @@ function Accomodation() {
      if(accomodation == null){ 
          navigate("*"); 
         } 
-    }, [])
+    })
   
   
     return (

@@ -1,17 +1,17 @@
-import Home from "../components/Home/js/Home"; 
-import Accomodation from "../components/Accomodation/js/Accomodation";
-import About from "../components/About/js/About";
-import NotFound from "../components/Notfound/js/NotFound";
-import Header from "../components/Home/js/Header"
+import Home from "./components/Home/js/Home"; 
+import Accomodation from "./components/Accomodation/js/Accomodation";
+import About from "./components/About/js/About";
+import NotFound from "./components/Notfound/js/NotFound";
+import Header from "./components/Home/js/Header"
 import { Route, Routes } from "react-router-dom";
 import { useState, createContext } from "react"; 
-import AccomodationsInfos from "./AccomodationsInfos";
+import AccomodationsInfos from "./js/AccomodationsInfos";
 import "./App.css";
 
 export const AccomodationContext = createContext(); 
 
 function App() {
-    const [accomodations, setAccomodations]= useState(AccomodationsInfos);  
+    const [accomodations]= useState(AccomodationsInfos);  
     return ( 
         <>
         <AccomodationContext.Provider value = {accomodations}>

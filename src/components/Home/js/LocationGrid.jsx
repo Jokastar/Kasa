@@ -1,7 +1,7 @@
  import Card from "./Card";
  import "../css/LocationGrid.css";
  import { useContext } from "react"; 
-import {AccomodationContext} from "../../../js/App"; 
+import {AccomodationContext} from "../../../App"; 
 function LocationGrid() {
     const accomodations = useContext(AccomodationContext);   
     return ( 
