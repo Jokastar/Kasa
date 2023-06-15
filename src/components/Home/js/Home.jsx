@@ -8,7 +8,6 @@ function Home() {
         <>
           <Banner title="Chez vous, partout et ailleurs" isHomePage={true}/>
           <LocationGrid/>
-          <Footer/>
         </>
     );
 }

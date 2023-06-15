@@ -2,26 +2,24 @@
 import DropDownMenu from "./DropDownMenu";  
 import Carousel from "./Carousel"; 
 import { AccomodationContext } from "../../../App";
-import { useContext, useEffect } from "react";
-import {useParams, useNavigate } from "react-router-dom";
+import { useContext, useState} from "react";
+import {useParams, Navigate} from "react-router-dom";
 import Ratings from "./Ratings";
 import "../css/Accomodation.css"; 
 
 
 function Accomodation() {
     
-    const navigate = useNavigate();
-    const accomodations = useContext(AccomodationContext); 
     const {id} = useParams();
-    let accomodation = accomodations.find(accomodation => accomodation.id === id); 
+    const accomodations = useContext(AccomodationContext);
+    let isAccomodation = accomodations.find(accomodation => accomodation.id === id);
 
-    useEffect(()=>{
-     if(accomodation == null){ 
-         navigate("*"); 
-        } 
-    })
-  
-  
+    const [accomodation] = useState(isAccomodation); 
+
+    if(accomodation === undefined){
+        return <Navigate to="/not-found"/>
+    }
+     
     return (
         <>
         <Carousel imageList={accomodation.pictures}/>

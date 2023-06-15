@@ -10,11 +10,25 @@ function Header() {
    navLinkRefs.current.forEach(li => li.classList.remove("active")); 
    e.target.classList.add("active"); 
   }
+
+  function handleClickLogo(){
+    navLinkRefs.current.forEach((a) => {
+      if(a.textContent === "A propos"){ 
+        a.classList.remove("active"); 
+        return; 
+      }
+     
+      if(a.classList.contains("active"))return; 
+
+      a.classList.add("active"); 
+    });
+
+  }
     return ( 
         <header>
           <div className="header">
             <div className="logo-container">
-                <Link to="/"><img src={kasaLogo} alt="logo-kasa"/></Link>
+                <Link to="/" onClick={handleClickLogo}><img src={kasaLogo} alt="logo-kasa" /></Link>
             </div>
             <ul className="nav-link">
                 <li><Link to="/"

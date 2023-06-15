@@ -25,10 +25,22 @@
     font-size: calc(var(--step-0) *1.1);
 }
 
-.nav-link li a.active{
-    text-decoration:underline;
-    text-decoration-color: #FF6060;
+.nav-link li a::after{
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: #FF6060;
+    transition: width 0.2s ease-in;
+    display: block;
 }
+
+.nav-link li a.active::after{
+    width:100%
+}
+
+
+
+
 
 
 
